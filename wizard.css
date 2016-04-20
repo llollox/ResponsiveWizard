@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Spinnaker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Spinnaker'), local('Spinnaker-Regular'), url("https://fonts.gstatic.com/s/spinnaker/v8/W7zI5bHqD9Cyn2evfF7QnxJtnKITppOI_IvcXXDNrsc.woff2") format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Spinnaker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Spinnaker'), local('Spinnaker-Regular'), url("https://fonts.gstatic.com/s/spinnaker/v8/WxzDAY6mC9v3znSJEtCoW1tXRa8TVwTICgirnJhmVJw.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ h1 {
+  margin-bottom: 2em;
+  font-family: "Spinnaker", sans-serif;
+  font-size: 1.25em;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: auto;
+  width: 86%;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li {
+  font-family: "Spinnaker", sans-serif;
+  position: relative;
+/*&:last-child
+          div
+            overflow hidden
+            white-space nowrap*/
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li span {
+  color: #999;
+  border: 3px solid #d6d6d6;
+  border-radius: 50px;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  line-height: 2em;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li div {
+  position: absolute;
+  bottom: -31px;
+  font-size: 18px;
+  -webkit-transform: translateX(-38%);
+          transform: translateX(-38%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li.done span {
+  border: 3px solid #e53935;
+  color: #2cac87;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li.active span {
+  color: #fff;
+  background: #e53935;
+  border: 3px solid #e53935;
+  font-weight: bold;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li:not(.active) div {
+  bottom: -28px;
+  color: #d6d6d6;
+  font-size: 14px;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li:not(:last-child) {
+  width: 22%;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li:not(:last-child):after {
+  content: '';
+  background: #d6d6d6;
+  height: 4px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -1em 0em 0 2.7em;
+}
+.portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li.done:not(:last-child):after {
+  background: #e53935;
+}
+@media only screen and (max-width: 1200px) {
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard {
+    width: 100%;
+  }
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric {
+    position: relative;
+  }
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li {
+    position: initial;
+  }
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li div {
+    bottom: -36px;
+    font-size: 24px;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li:not(:last-child) {
+    width: 21%;
+  }
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li:not(:last-child):after {
+    margin: -1em 0em 0 2.3em;
+  }
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_ .wizard.numeric li:not(.active) div {
+    display: none;
+  }
+}
+.Quote-portlet legend {
+  margin-bottom: 10px;
+}

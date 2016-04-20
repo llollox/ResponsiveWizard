@@ -1,0 +1,115 @@
+$red = #e53935
+$gray = #d6d6d6
+  
+.wizard
+  list-style none
+  padding 0
+  display -webkit-box
+  display -webkit-flex
+  display -ms-flexbox
+  display flex
+  -webkit-box-pack justify
+  -webkit-justify-content space-between
+  -ms-flex-pack justify
+  justify-content space-between
+  margin auto
+  width 86%
+  
+  &.numeric
+    li
+      font-family "Spinnaker", sans-serif
+      position relative
+      
+      span
+        color #999999
+        border 3px solid $gray
+        border-radius 50px
+        text-align center
+        width 27px
+        height 27px
+        display inline-block
+        line-height 2em
+        
+      div 
+        position absolute
+        bottom -31px
+        font-size 18px
+        transform translateX(-38%)
+        overflow hidden
+        white-space nowrap
+    
+      &.done
+        span
+          border 3px solid $red
+          color #2CAC87
+                
+      &.active
+        span
+          color #fff
+          background $red
+          border 3px solid $red
+          font-weight bold
+      
+      &:not(.active)
+        div
+          bottom -28px
+          color $gray
+          font-size 14px
+        
+      &:not(:last-child)  
+        width 22%
+        
+        &:after
+          content ''
+          background $gray
+          height 4px
+          border-radius 4px
+          display -webkit-box
+          display -webkit-flex
+          display -ms-flexbox
+          display flex
+          margin -1em 0em 0 2.7em
+      
+      /*&:last-child
+        div
+          overflow hidden
+          white-space nowrap*/
+   
+      &.done
+        &:not(:last-child):after
+          background $red
+
+@media only screen and (max-width: 1200px)
+  .wizard
+    
+    width 100%
+
+    &.numeric
+      position relative
+      
+      li
+        position initial
+        
+        div
+          bottom -36px
+          font-size 24px
+          left 0
+          transform translateX(0)
+          
+        &:not(:last-child)
+          width 21%
+          
+          &:after
+            margin -1em 0em 0 2.3em
+      
+        &:not(.active) 
+          div
+            display none
+
+/*@media only screen and (min-width: 1200px)
+  .portlet-boundary_quotationcar_WAR_Quoteportlet_
+    .wizard
+      &.numeric
+        li    
+          &:not(:last-child)
+            width 24%*/
