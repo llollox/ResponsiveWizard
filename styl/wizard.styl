@@ -1,65 +1,67 @@
-$red = #e53935
-$gray = #d6d6d6
-  
-.wizard
-  list-style none
-  padding 0
-  display -webkit-box
-  display -webkit-flex
-  display -ms-flexbox
-  display flex
-  -webkit-box-pack justify
-  -webkit-justify-content space-between
-  -ms-flex-pack justify
-  justify-content space-between
+$red        = #e53935
+$gray       = #d6d6d6
+$gray_text  = #999999
+
+div.wizard-container 
+  display table
   margin auto
-  width 86%
+  width 90%
   
-  &.numeric
-    li
-      font-family "Spinnaker", sans-serif
-      position relative
-      
-      span
-        color #999999
-        border 3px solid $gray
-        border-radius 50px
-        text-align center
-        width 27px
-        height 27px
-        display inline-block
-        line-height 2em
-        
-      div 
-        position absolute
-        bottom -31px
-        font-size 18px
-        transform translateX(-38%)
-        overflow hidden
-        white-space nowrap
+  .wizard
+    list-style none
+    padding 0
+    display table-row
+    -webkit-box-pack justify
+    -webkit-justify-content space-between
+    -ms-flex-pack justify
+    justify-content space-between
     
-      &.done
+    &.numeric
+      li
+        font-family "Spinnaker", sans-serif
+        position relative
+        display table-cell
+        
         span
-          border 3px solid $red
-          color #2CAC87
-                
-      &.active
-        span
-          color #fff
-          background $red
-          border 3px solid $red
-          font-weight bold
-      
-      &:not(.active)
+          color $gray_text
+          border 3px solid $gray
+          border-radius 50px
+          text-align center
+          width 27px
+          height 27px
+          display inline-block
+          line-height 1.9em
+          
         div
-          bottom -28px
-          color $gray
-          font-size 14px
+          position absolute
+          bottom -31px
+          font-size 18px
+          transform translateX(calc(-50% + 15px))
+          overflow hidden
+          white-space nowrap
+      
+        &.done
+          span
+            border 3px solid $red
+            color #2CAC87
+                  
+        &.active
+          span
+            color #fff
+            background $red
+            border 3px solid $red
+            font-weight bold
         
-      &:not(:last-child)  
-        width 22%
+        &:not(.active)
+          div
+            bottom -28px
+            color $gray_text
+            font-size 14px
         
-        &:after
+        &:last-child
+          width 33px
+          
+        &:not(:last-child):after
           content ''
           background $gray
           height 4px
@@ -68,48 +70,31 @@ $gray = #d6d6d6
           display -webkit-flex
           display -ms-flexbox
           display flex
-          margin -1em 0em 0 2.7em
-      
-      /*&:last-child
-        div
-          overflow hidden
-          white-space nowrap*/
-   
-      &.done
-        &:not(:last-child):after
-          background $red
+          margin -1em 0.85em 0em 2.8em
+     
+        &.done
+          &:not(:last-child):after
+            background $red
 
 @media only screen and (max-width: 1200px)
-  .wizard
-    
+  div.wizard-container
+    height 80px
+    position relative
     width 100%
-
-    &.numeric
-      position relative
-      
+    
+    .wizard.numeric
       li
         position initial
         
         div
-          bottom -36px
+          bottom 0
           font-size 24px
           left 0
           transform translateX(0)
           
-        &:not(:last-child)
-          width 21%
-          
-          &:after
-            margin -1em 0em 0 2.3em
-      
+        &:not(:last-child):after
+          margin -1em 0.45em 0 2.35em
+        
         &:not(.active) 
           div
             display none
-
-/*@media only screen and (min-width: 1200px)
-  .portlet-boundary_quotationcar_WAR_Quoteportlet_
-    .wizard
-      &.numeric
-        li    
-          &:not(:last-child)
-            width 24%*/
