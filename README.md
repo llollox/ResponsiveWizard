@@ -24,22 +24,22 @@ Add `active` class for the current step.
 
 ```html
 <ol class="wizard numeric">
-	<li class="done">
-	   <span> 1 </span>
-	   <div>Your Cart</div>
-	</li>
-	<li class="active">
-		<span> 2 </span>
-		<div>Shipment</div>
-	</li>
-	<li>
-		<span> 3 </span>
-		<div>Payment</div>
-	</li>
-	<li>
-		<span> 4 </span>
-		<div>Confirmation</div>
-	</li>
+  <li class="done">
+    <span> 1 </span>
+    <div>Your Cart</div>
+  </li>
+  <li class="active">
+    <span> 2 </span>
+    <div>Shipment</div>
+  </li>
+  <li>
+    <span> 3 </span>
+    <div>Payment</div>
+  </li>
+  <li>
+    <span> 4 </span>
+    <div>Confirmation</div>
+  </li>
 </ol>
 ```
 
