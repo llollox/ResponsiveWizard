@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Spinnaker')
 
 // Colors
-$red        = #e53935
+$blue       = #0277BD
 $gray       = #d6d6d6
 $gray_text  = #999999
 
 // CSS
-div.wizard-container 
+div.wizard-container
   display table
   height 65px
   margin auto
   width 90%
-  
+
   .wizard
     list-style none
     padding 0
@@ -21,13 +21,13 @@ div.wizard-container
     -webkit-justify-content space-between
     -ms-flex-pack justify
     justify-content space-between
-    
+
     &.numeric
       li
         font-family "Spinnaker", sans-serif
         position relative
         display table-cell
-        
+
         span
           color $gray_text
           border 3px solid $gray
@@ -37,7 +37,7 @@ div.wizard-container
           height 27px
           display inline-block
           line-height 1.9em
-          
+
         div
           position absolute
           bottom 0px
@@ -45,28 +45,27 @@ div.wizard-container
           transform translateX(calc(-50% + 15px))
           overflow hidden
           white-space nowrap
-      
+
         &.done
           span
-            border 3px solid $red
-            color #2CAC87
-                  
+            border 3px solid $blue
+
         &.active
           span
             color #fff
-            background $red
-            border 3px solid $red
+            background $blue
+            border 3px solid $blue
             font-weight bold
-        
+
         &:not(.active)
           div
             bottom 3px
             color $gray_text
             font-size 14px
-        
+
         &:last-child
           width 33px
-          
+
         &:not(:last-child):after
           content ''
           background $gray
@@ -77,30 +76,30 @@ div.wizard-container
           display -ms-flexbox
           display flex
           margin -1em 0.85em 0em 2.8em
-     
+
         &.done
           &:not(:last-child):after
-            background $red
+            background $blue
 
 @media only screen and (max-width: 1200px)
   div.wizard-container
     height 80px
     position relative
     width 100%
-    
+
     .wizard.numeric
       li
         position initial
-        
+
         div
           bottom 0
           font-size 24px
           left 0
           transform translateX(0)
-          
+
         &:not(:last-child):after
           margin -1em 0.45em 0 2.35em
-        
-        &:not(.active) 
+
+        &:not(.active)
           div
             display none

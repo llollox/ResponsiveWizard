@@ -1,32 +1,32 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="../wizard.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	<!-- Wizard Lib-->
+	<link rel="stylesheet" type="text/css" href="../css/wizard.css">
+	<script src="../js/wizard.jquery.js" type="text/javascript"></script>
 </head>
 <body>
+  <br/><br/>
 	<div class="wizard-container">
 
 		<ol class="wizard numeric">
 			<li class="done">
 			   <span> 1 </span>
-			   <div>Dati Generali</div>
+			   <div>Your Cart</div>
 			</li>
 			<li class="active">
 				<span> 2 </span>
-				<div>Dati Personali</div>
+				<div>Shipment</div>
 			</li>
 			<li>
 				<span> 3 </span>
-				<div>Dati Veicolo</div>
+				<div>Payment</div>
 			</li>
 			<li>
 				<span> 4 </span>
-				<div>Riepilogo</div>
-			</li>
-			<li>
-				<span> 5 </span>
-				<div>Calcolo Premio</div>
+				<div>Confirmation</div>
 			</li>
 		</ol>
 	</div>
@@ -35,36 +35,21 @@
 </html>
 
 <br/><br/><br/><br/>
-<button onClick="prevStepWizard()">Back</button>
-<button onClick="nextStepWizard()">Next</button>
+<button id="prev-btn">Back</button>
+<button id="next-btn">Next</button>
 
 <script type="text/javascript">
-	function prevStepWizard() {
-	    var active = getActive();
-	    var index = $(active).index();
-	    if(index > 0) {
-	        $(active).removeClass("active");
-	        $(active).prev().removeClass("done");
-	        $(active).prev().addClass("active");
-	    }
-	}
-	
-	function nextStepWizard () {
-	    var active = getActive();
-	    var index = $(active).index();
-	    if(index < getNumSteps() - 1) {
-	        $(active).removeClass("active");
-	        $(active).addClass("done");
-	        $(active).next().addClass("active");
-	    }
-	}
-	
-	function getNumSteps() {
-	    return $("ol.wizard li").length;
-	}
-	
-	function getActive() {
-	    return $("ol.wizard li.active");
-	}
+	$(document).ready(function () {
+		var el = $("ol.wizard.numeric");
+
+
+		$('#next-btn').on('click', function () {
+            $(el).wizard('nextStep');
+        });
+
+        $('#prev-btn').on('click', function () {
+            $(el).wizard('previousStep');
+        });
+    });
 
 </script>
